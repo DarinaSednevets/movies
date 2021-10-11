@@ -1,5 +1,4 @@
-// import { Link } from 'react-router-dom'
-// import routes from "../../routes"
+import PropTypes from "prop-types"
 import { Component } from "react"
 
 class SearchForm extends Component {
@@ -33,3 +32,7 @@ class SearchForm extends Component {
     }
 }
 export default SearchForm;
+
+PropTypes.SearchForm = {
+    onSubmit: PropTypes.func.isRequired,
+}

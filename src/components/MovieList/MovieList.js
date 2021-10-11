@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-
+import PropTypes from "prop-types"
 
 const MovieList = ({ movies, query, pathname }) => {
     return (
@@ -27,3 +27,12 @@ const MovieList = ({ movies, query, pathname }) => {
     )
 }
 export default MovieList;
+
+PropTypes.MovieList = {
+    movies: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.string.isRequired,
+            title: PropTypes.string.isRequired,
+        })
+    )
+}
